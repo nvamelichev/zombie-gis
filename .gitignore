@@ -1,0 +1,12 @@
+# Compilation Results
+*.class
+*.jar
+*.war
+*.ear
+
+# Application Logs
+*.log
+
+# VM Crash Logs
+hs_err_pid*
+
