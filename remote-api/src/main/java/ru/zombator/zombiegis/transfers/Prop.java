@@ -58,19 +58,19 @@ public enum Prop {
     POLY_CLOSED(Primitive.BOOL),
 
     /**
-     * Начальный угол сектора в градусах.
+     * Начальный угол дуги в градусах.
      */
     ARC_START(Primitive.REAL),
     /**
-     * Длина сектора в градусах.
+     * Длина дуги в градусах.
      */
     ARC_EXTENT(Primitive.REAL),
     /**
-     * Радиус по X в морских милях.
+     * Радиус дуги по X в морских милях.
      */
     ARC_R_X(Primitive.REAL),
     /**
-     * Радиус по Y в морских милях.
+     * Радиус дуги по Y в морских милях.
      */
     ARC_R_Y(Primitive.REAL),
 
