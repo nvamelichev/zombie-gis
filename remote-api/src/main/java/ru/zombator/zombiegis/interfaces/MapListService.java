@@ -1,5 +1,7 @@
 package ru.zombator.zombiegis.interfaces;
 
+import org.netbeans.api.annotations.common.NonNull;
+
 import ru.zombator.zombiegis.geo.Pos;
 import ru.zombator.zombiegis.transfers.MapDTO;
 
@@ -40,7 +42,7 @@ public interface MapListService {
      *
      * @throws RemoteGISException не удалось создать карту
      */
-    MapDTO createMap(String name, Pos center, double initialZoom) throws RemoteGISException;
+    MapDTO createMap(@NonNull String name, @NonNull Pos center, double initialZoom) throws RemoteGISException;
 
     /**
      * Обновляет указанную карту. Если такой карты нет, ничего не делает.
@@ -51,7 +53,7 @@ public interface MapListService {
      *
      * @return <code>true</code>, если карта была обновлена; иначе <code>false</code>
      */
-    boolean modifyMap(MapDTO map) throws RemoteGISException;
+    boolean modifyMap(@NonNull MapDTO map) throws RemoteGISException;
 
     /**
      * Удаляет карту с указанным идентификатором. Если такой карты нет, ничего не делает.

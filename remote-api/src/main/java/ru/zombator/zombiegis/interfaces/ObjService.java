@@ -1,5 +1,7 @@
 package ru.zombator.zombiegis.interfaces;
 
+import org.netbeans.api.annotations.common.NonNull;
+
 import ru.zombator.zombiegis.transfers.ObjDTO;
 
 /**
@@ -23,7 +25,7 @@ public interface ObjService {
      *
      * @throws RemoteGISException не удалось подписаться
      */
-    void startListening(long mapId, ObjCallback clbk) throws RemoteGISException;
+    void startListening(long mapId, @NonNull ObjCallback clbk) throws RemoteGISException;
 
     /**
      * Отписывается от изменений объектов карты. После удачной отписки, в отдельном потоке будет вызван метод обработчика
@@ -34,7 +36,7 @@ public interface ObjService {
      *
      * @throws RemoteGISException не удалось отписаться
      */
-    void stopListening(long mapId, ObjCallback clbk) throws RemoteGISException;
+    void stopListening(long mapId, @NonNull ObjCallback clbk) throws RemoteGISException;
 
     // CRUD
     /**
@@ -47,7 +49,7 @@ public interface ObjService {
      *
      * @return созданные объекты
      */
-    ObjDTO[] createObjects(long mapId, ObjDTO[] objs) throws RemoteGISException;
+    ObjDTO[] createObjects(long mapId, @NonNull ObjDTO[] objs) throws RemoteGISException;
 
     /**
      * Изменяет указанные объекты.
@@ -56,7 +58,7 @@ public interface ObjService {
      *
      * @throws RemoteGISException не удалось произвести изменения
      */
-    void modifyObjects(ObjDTO[] objs) throws RemoteGISException;
+    void modifyObjects(@NonNull ObjDTO[] objs) throws RemoteGISException;
 
     /**
      * Удаляет указанные объекты.
@@ -66,5 +68,5 @@ public interface ObjService {
      *
      * @throws RemoteGISException не удалось удалить объекты
      */
-    void deleteObjects(long[] objIds) throws RemoteGISException;
+    void deleteObjects(@NonNull long[] objIds) throws RemoteGISException;
 }
