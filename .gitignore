@@ -12,3 +12,10 @@ hs_err_pid*
 
 /common/target/
 /remote-api/target/
+/branding/target/
+/application/target/
+/model/target/
+/jcip-annotations-wrapper/target/
+/guava-testlib-wrapper/target/
+/domainmodel/core/target/
+/domainmodel/shapes/target/
