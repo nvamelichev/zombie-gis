@@ -36,11 +36,6 @@
                 <artifactId>guava-testlib-jdk5</artifactId>
                 <version>17.0</version>
             </dependency>
-            <dependency>
-                <groupId>net.jcip</groupId>
-                <artifactId>jcip-annotations</artifactId>
-                <version>1.0</version>
-            </dependency>
 
             <dependency>
                 <groupId>junit</groupId>
@@ -123,9 +118,18 @@
     </scm>
 
     <modules>
+        <!-- APIs -->
+        <module>remote-api</module>
+        <module>domainmodel</module>
+
+        <!-- Utilities -->
+        <module>common</module>
+
+        <!-- NetBeans Library Wrappers -->
+        <module>jcip-annotations-wrapper</module>
+
+        <!-- NetBeans App -->
         <module>branding</module>
         <module>application</module>
-        <module>common</module>
-        <module>remote-api</module>
     </modules>
 </project>
