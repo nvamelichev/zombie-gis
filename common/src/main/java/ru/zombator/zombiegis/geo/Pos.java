@@ -2,10 +2,13 @@ package ru.zombator.zombiegis.geo;
 
 import static java.lang.Double.doubleToLongBits;
 import static java.lang.Math.PI;
-import static java.lang.Math.toRadians;
 import static java.lang.Math.toDegrees;
+import static java.lang.Math.toRadians;
+
+import java.io.Serializable;
 
 import com.google.common.base.Preconditions;
+
 import net.jcip.annotations.Immutable;
 
 /**
@@ -14,7 +17,7 @@ import net.jcip.annotations.Immutable;
  * @author nvamelichev
  */
 @Immutable
-public final class Pos {
+public final class Pos implements Serializable {
     /**
      * Минимальное допустимое значение широты в градусах.
      */
