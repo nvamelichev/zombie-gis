@@ -10,3 +10,4 @@
 # VM Crash Logs
 hs_err_pid*
 
+/common/target/
