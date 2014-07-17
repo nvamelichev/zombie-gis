@@ -5,6 +5,7 @@ import org.netbeans.api.annotations.common.NonNull;
 import com.google.common.base.Predicate;
 import com.google.common.collect.ImmutableSet;
 
+import ru.zombator.zombiegis.GISException;
 import ru.zombator.zombiegis.model.event.MapListener;
 import ru.zombator.zombiegis.model.obj.Obj;
 import ru.zombator.zombiegis.model.obj.event.ObjListener;
@@ -49,6 +50,25 @@ public interface ObjMap extends AutoCloseable {
     @NonNull ImmutableSet<Obj<?, ?>> objs(@NonNull Predicate<Obj<?, ?>> pred);
 
     /**
+     * Открывает карту - начинает загрузку объектов карты и подписывается на события
+     * изменения карты.
+     *
+     * @throws GISException не удалось начать загрузку объектов карты
+     *
+     * @see #isOpen()
+     */
+    void open() throws GISException;
+
+    /**
+     * Проверяет, открыта ли сейчас карта.
+     *
+     * @return <code>true</code>, если карта открыта; иначе <code>false</code>
+     *
+     * @see #open()
+     */
+    boolean isOpen();
+
+    /**
      * Закрывает карту и отсоединяет от нее всех слушателей.
      */
     @Override
@@ -68,7 +88,7 @@ public interface ObjMap extends AutoCloseable {
     void removeListener(MapListener listener);
 
     /**
-     * Добавляет слушателя изменений объектов карты.
+     * Добавляет слушателя изменений объектов карты. Если карта {@link #isOpen()}
      *
      * @param listener добавляемый слушатель
      */
