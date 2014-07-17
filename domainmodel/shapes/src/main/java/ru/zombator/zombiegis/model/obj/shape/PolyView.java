@@ -2,7 +2,7 @@ package ru.zombator.zombiegis.model.obj.shape;
 
 import java.awt.Paint;
 
-import ru.zombator.zombiegis.model.obj.BasicViewModel;
+import ru.zombator.zombiegis.model.obj.def.BasicViewModel;
 
 /**
  * Модель отображения полигона.

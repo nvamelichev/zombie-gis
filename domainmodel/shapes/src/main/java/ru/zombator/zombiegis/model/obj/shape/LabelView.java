@@ -10,7 +10,7 @@ import java.util.Set;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableSet;
 
-import ru.zombator.zombiegis.model.obj.BasicViewModel;
+import ru.zombator.zombiegis.model.obj.def.BasicViewModel;
 import ru.zombator.zombiegis.properties.TextAlign;
 import ru.zombator.zombiegis.properties.TextStyle;
 

@@ -1,6 +1,8 @@
-package ru.zombator.zombiegis.model.obj;
+package ru.zombator.zombiegis.model.obj.def;
 
 import java.awt.Paint;
+
+import ru.zombator.zombiegis.model.obj.ViewModel;
 
 /**
  * Базовый класс для реализации {@link ViewModel модели отображения}.

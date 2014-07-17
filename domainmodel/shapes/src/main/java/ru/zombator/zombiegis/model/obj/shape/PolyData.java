@@ -6,7 +6,7 @@ import com.google.common.collect.ImmutableList;
 
 import ru.zombator.zombiegis.geo.Pos;
 import ru.zombator.zombiegis.geo.Pos3D;
-import ru.zombator.zombiegis.model.obj.BasicDataModel;
+import ru.zombator.zombiegis.model.obj.def.BasicDataModel;
 
 /**
  * Информационная модель полигона.

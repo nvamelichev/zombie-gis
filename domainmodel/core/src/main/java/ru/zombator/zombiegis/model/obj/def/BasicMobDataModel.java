@@ -1,8 +1,9 @@
-package ru.zombator.zombiegis.model.obj;
+package ru.zombator.zombiegis.model.obj.def;
 
 import com.google.common.base.Preconditions;
 
 import ru.zombator.zombiegis.geo.Pos;
+import ru.zombator.zombiegis.model.obj.MobDataModel;
 
 /**
  * Базовый класс для реализаций {@link MobDataModel информационной модели подвижного объекта}.

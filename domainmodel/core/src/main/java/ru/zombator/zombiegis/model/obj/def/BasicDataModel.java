@@ -1,8 +1,9 @@
-package ru.zombator.zombiegis.model.obj;
+package ru.zombator.zombiegis.model.obj.def;
 
 import java.util.Objects;
 
 import ru.zombator.zombiegis.geo.Pos;
+import ru.zombator.zombiegis.model.obj.DataModel;
 
 /**
  * Базовый класс для реализаций {@link DataModel информационной модели}.

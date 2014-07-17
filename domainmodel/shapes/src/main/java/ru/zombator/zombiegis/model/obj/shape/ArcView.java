@@ -4,7 +4,7 @@ import java.awt.Paint;
 
 import com.google.common.base.Preconditions;
 
-import ru.zombator.zombiegis.model.obj.BasicViewModel;
+import ru.zombator.zombiegis.model.obj.def.BasicViewModel;
 
 /**
  * Представление эллипса.
