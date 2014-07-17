@@ -19,3 +19,4 @@ hs_err_pid*
 /guava-testlib-wrapper/target/
 /domainmodel/core/target/
 /domainmodel/shapes/target/
+/gis-api/target/

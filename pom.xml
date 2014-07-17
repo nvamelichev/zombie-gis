@@ -121,6 +121,7 @@
         <!-- APIs -->
         <module>remote-api</module>
         <module>domainmodel</module>
+        <module>gis-api</module>
 
         <!-- Utilities -->
         <module>common</module>
