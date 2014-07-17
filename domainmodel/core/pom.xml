@@ -42,8 +42,13 @@
                 <artifactId>nbm-maven-plugin</artifactId>
                 <configuration>
                     <publicPackages>
+                        <publicPackage>ru.zombator.zombiegis</publicPackage>
                         <publicPackage>ru.zombator.zombiegis.model</publicPackage>
+                        <publicPackage>ru.zombator.zombiegis.model.event</publicPackage>
                         <publicPackage>ru.zombator.zombiegis.model.obj</publicPackage>
+                        <publicPackage>ru.zombator.zombiegis.model.obj.def</publicPackage>
+                        <publicPackage>ru.zombator.zombiegis.model.obj.event</publicPackage>
+                        <publicPackage>ru.zombator.zombiegis.model.obj.util</publicPackage>
                     </publicPackages>
                 </configuration>
             </plugin>
