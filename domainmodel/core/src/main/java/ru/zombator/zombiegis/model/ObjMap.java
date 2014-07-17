@@ -5,14 +5,16 @@ import org.netbeans.api.annotations.common.NonNull;
 import com.google.common.base.Predicate;
 import com.google.common.collect.ImmutableSet;
 
+import ru.zombator.zombiegis.model.event.MapListener;
 import ru.zombator.zombiegis.model.obj.Obj;
+import ru.zombator.zombiegis.model.obj.event.ObjListener;
 
 /**
  * Интерфейс карты.
  *
  * @author anv
  */
-public interface ObjMap {
+public interface ObjMap extends AutoCloseable {
     /**
      * Возвращает идентификатор карты.
      *
@@ -41,6 +43,40 @@ public interface ObjMap {
      * @param pred условие фильтрации объектов карты
      *
      * @return все объекты карты, удовлетворяющие условию в данный момент
+     *
+     * @see ru.zombator.zombiegis.model.obj.util.Objs Objs
      */
     @NonNull ImmutableSet<Obj<?, ?>> objs(@NonNull Predicate<Obj<?, ?>> pred);
+
+    /**
+     * Закрывает карту и отсоединяет от нее всех слушателей.
+     */
+    @Override
+    void close();
+
+    /**
+     * Добавляет слушателя событий карты (открыта/закрыта).
+     *
+     * @param listener добавляемый слушатель
+     */
+    void addListener(MapListener listener);
+    /**
+     * Удаляет слушателя событий карты (открыта/закрыта).
+     *
+     * @param listener удаляемый слушатель
+     */
+    void removeListener(MapListener listener);
+
+    /**
+     * Добавляет слушателя изменений объектов карты.
+     *
+     * @param listener добавляемый слушатель
+     */
+    void addObjListener(ObjListener listener);
+    /**
+     * Удаляет слушателя изменений объектов карты.
+     *
+     * @param listener удаляемый слушатель
+     */
+    void removeObjListener(ObjListener listener);
 }
