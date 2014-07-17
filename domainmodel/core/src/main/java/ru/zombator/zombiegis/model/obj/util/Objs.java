@@ -25,6 +25,8 @@ public final class Objs {
 
     /**
      * Фильтр для возвращения всех объектов.
+     *
+     * @return фильтр, возвращающий все объекты
      */
     public static Predicate<Obj<?, ?>> all() {
         return Predicates.alwaysTrue();
@@ -32,6 +34,8 @@ public final class Objs {
 
     /**
      * Фильтр, не возвращающий ни одного объекта.
+     *
+     * @return фильтр, не возвращающий ни одного объекта
      */
     public static Predicate<Obj<?, ?>> none() {
         return Predicates.alwaysFalse();
