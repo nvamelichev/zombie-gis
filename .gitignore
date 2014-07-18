@@ -20,3 +20,5 @@ hs_err_pid*
 /domainmodel/core/target/
 /domainmodel/shapes/target/
 /gis-api/target/
+/annotations/target/
+/gis-api-annotations/target/

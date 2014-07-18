@@ -38,6 +38,12 @@
             </dependency>
 
             <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>2.3</version>
+            </dependency>
+
+            <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>4.11</version>
@@ -122,6 +128,7 @@
         <module>remote-api</module>
         <module>domainmodel</module>
         <module>gis-api</module>
+        <module>gis-api-annotations</module>
 
         <!-- Utilities -->
         <module>common</module>
@@ -132,5 +139,6 @@
         <!-- NetBeans App -->
         <module>branding</module>
         <module>application</module>
+        <module>impl</module>
     </modules>
 </project>
