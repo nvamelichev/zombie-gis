@@ -139,6 +139,6 @@
         <!-- NetBeans App -->
         <module>branding</module>
         <module>application</module>
-        <module>impl</module>
+        <module>gis-impl</module>
     </modules>
 </project>

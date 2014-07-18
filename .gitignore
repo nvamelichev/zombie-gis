@@ -22,3 +22,5 @@ hs_err_pid*
 /gis-api/target/
 /annotations/target/
 /gis-api-annotations/target/
+/impl/target/
+/gis-impl/target/
