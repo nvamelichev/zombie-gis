@@ -3,7 +3,10 @@ package ru.zombator.zombiegis.model.obj;
 import org.netbeans.api.annotations.common.CheckForNull;
 import org.netbeans.api.annotations.common.NonNull;
 
+import org.joda.time.Instant;
+
 import net.jcip.annotations.Immutable;
+
 import ru.zombator.zombiegis.model.ObjMap;
 import ru.zombator.zombiegis.properties.Type;
 
@@ -115,4 +118,9 @@ public interface Obj<D extends DataModel, V extends ViewModel> {
      * @return карта, которой принадлежит объект
      */
     @NonNull ObjMap getMap();
+
+    /**
+     * @return временная метка данного состояния объекта
+     */
+    @NonNull Instant getTimestamp();
 }
