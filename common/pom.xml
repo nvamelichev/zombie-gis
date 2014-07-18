@@ -10,7 +10,7 @@
 
     <artifactId>zombiegis-common</artifactId>
     <packaging>nbm</packaging>
-    <name>Common GIS Data Structures &amp; Algorithms</name>
+    <name>Common Utilities, Data Structures &amp; Algorithms</name>
 
     <dependencies>
         <dependency>
@@ -44,6 +44,7 @@
                 <artifactId>nbm-maven-plugin</artifactId>
                 <configuration>
                     <publicPackages>
+                        <publicPackage>ru.zombator.util</publicPackage>
                         <publicPackage>ru.zombator.zombiegis.geo</publicPackage>
                     </publicPackages>
                 </configuration>
