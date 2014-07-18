@@ -17,7 +17,7 @@ public final class ObjDTO implements Serializable {
      */
     public ValueDTO[] values;
     /**
-     * Штамп времени.
+     * Штамп времени (в мс с начала эпохи).
      */
     public Long timestamp;
     /**
