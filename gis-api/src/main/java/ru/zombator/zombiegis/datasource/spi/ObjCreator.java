@@ -4,8 +4,7 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-
-import org.openide.util.lookup.NamedServiceDefinition;
+import org.netbeans.api.annotations.common.NonNull;
 
 import ru.zombator.zombiegis.annotations.NamedServiceExDefinition;
 import ru.zombator.zombiegis.datasource.ObjData;
@@ -44,18 +43,18 @@ public interface ObjCreator {
      *
      * @see #toDomain(ObjData)
      */
-    boolean canConvert(ObjData data);
+    boolean canConvert(@NonNull ObjData data);
 
     /**
      * Создает объект предметной области по данному набору свойств.
      *
-     * @param props данные объекта
+     * @param data данные объекта
      *
      * @return объект предметной области
      *
      * @throws IllegalArgumentException <code>!{@link #canCreate(ObjData) canCreate(props)}</code>
      */
-    Obj<?, ?> toDomain(ObjData props);
+    Obj<?, ?> toDomain(@NonNull ObjData data);
 
     /**
      * Аннотация для регистрации создателей объектов.
@@ -66,6 +65,8 @@ public interface ObjCreator {
     public static @interface Registration {
         /**
          * Тип объектов, которые можно создать.
+         *
+         * @return тип объектов
          */
         Type type();
 
