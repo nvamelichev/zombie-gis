@@ -6,6 +6,7 @@ import org.netbeans.api.annotations.common.NonNull;
 import org.joda.time.Instant;
 
 import net.jcip.annotations.Immutable;
+import ru.zombator.zombiegis.geo.Pos;
 
 import ru.zombator.zombiegis.model.ObjMap;
 import ru.zombator.zombiegis.properties.Type;
@@ -97,6 +98,14 @@ public interface Obj<D extends DataModel, V extends ViewModel> {
     boolean isMobile();
 
     /**
+     * Возвращает географическое положение центра объекта. Вызов аналогичен вызову
+     * <code>{@link #getData() getData()}.{@link DataModel#getCenter() getCenter()}</code>.
+     *
+     * @return географическое положение центра объекта
+     */
+    Pos getCenter();
+
+    /**
      * Проверяет, отображается объект на карте или нет. Вызов аналогичен вызову
      * <code>{@link #getData() getData()}.{@link DataModel#isVisible() isVisible()}</code>.
      *
@@ -113,11 +122,6 @@ public interface Obj<D extends DataModel, V extends ViewModel> {
      * @return модель отображения
      */
     @NonNull V getView();
-
-    /**
-     * @return карта, которой принадлежит объект
-     */
-    @NonNull ObjMap getMap();
 
     /**
      * @return временная метка данного состояния объекта
