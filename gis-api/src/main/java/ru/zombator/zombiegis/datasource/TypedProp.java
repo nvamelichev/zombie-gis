@@ -14,6 +14,7 @@ import ru.zombator.zombiegis.geo.Pos;
 import ru.zombator.zombiegis.properties.TextAlign;
 import ru.zombator.zombiegis.properties.TextStyle;
 import ru.zombator.zombiegis.properties.Type;
+import ru.zombator.zombiegis.transfers.Primitive;
 import ru.zombator.zombiegis.transfers.Prop;
 
 /**
@@ -155,8 +156,15 @@ public final class TypedProp<T extends Serializable> implements Serializable, Co
     /**
      * @return тип значений свойства
      */
-    public Class<T> getType() {
+    public Class<T> type() {
         return clazz;
+    }
+
+    /**
+     * @return серверный тип значений свойства
+     */
+    public Primitive primitive() {
+        return prop.getPrimitive();
     }
 
     /**

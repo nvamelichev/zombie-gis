@@ -119,7 +119,7 @@ public final class DefDTOConverter implements DTOConverter {
         }
 
         private <T extends Serializable> T get0(TypedProp<T> prop, T def) {
-            return prop.getType().cast(Iterables.getFirst(values.get(prop), def));
+            return prop.type().cast(Iterables.getFirst(values.get(prop), def));
         }
 
         @Override
