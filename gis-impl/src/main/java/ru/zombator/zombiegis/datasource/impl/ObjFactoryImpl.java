@@ -1,4 +1,4 @@
-package ru.zombator.zombiegis.datasource.def;
+package ru.zombator.zombiegis.datasource.impl;
 
 import static ru.zombator.zombiegis.datasource.TypedProp.TYPE;
 
@@ -26,8 +26,8 @@ import ru.zombator.zombiegis.transfers.ObjDTO;
  * @author nvamelichev
  */
 @ServiceProvider(service = ObjFactory.class)
-public final class DefObjFactory implements ObjFactory {
-    private static final Logger LOG = Logger.getLogger(DefObjFactory.class.getName());
+public final class ObjFactoryImpl implements ObjFactory {
+    private static final Logger LOG = Logger.getLogger(ObjFactoryImpl.class.getName());
 
     @Override
     public Collection<Obj<?, ?>> toDomain(Collection<ObjDTO> dtos) {

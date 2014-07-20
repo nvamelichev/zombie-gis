@@ -1,4 +1,4 @@
-package ru.zombator.zombiegis.datasource.def;
+package ru.zombator.zombiegis.datasource.impl;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -31,8 +31,8 @@ import ru.zombator.zombiegis.transfers.ValueDTO;
  * @author nvamelichev
  */
 @ServiceProvider(service = DTOConverter.class)
-public final class DefDTOConverter implements DTOConverter {
-    private static final Logger LOG = Logger.getLogger(DefDTOConverter.class.getName());
+public final class DTOConverterImpl implements DTOConverter {
+    private static final Logger LOG = Logger.getLogger(DTOConverterImpl.class.getName());
 
     @Override
     public Collection<ObjData> toObjData(Collection<ObjDTO> dtos) {
