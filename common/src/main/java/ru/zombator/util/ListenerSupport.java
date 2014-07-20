@@ -1,5 +1,6 @@
 package ru.zombator.util;
 
+import com.google.common.base.Preconditions;
 import java.lang.reflect.Proxy;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -51,6 +52,7 @@ public final class ListenerSupport<T> implements AutoCloseable {
      * @throws IllegalStateException
      */
     public void addListener(T listener) {
+        checkState();
         listeners.add(listener);
     }
 
@@ -60,6 +62,7 @@ public final class ListenerSupport<T> implements AutoCloseable {
      * @param listener удаляемый слушатель
      */
     public void removeListener(T listener) {
+        checkState();
         listeners.remove(listener);
     }
 
@@ -91,6 +94,7 @@ public final class ListenerSupport<T> implements AutoCloseable {
      * @see #getListeners()
      */
     public T getFireable() {
+        checkState();
         return fireable;
     }
 
@@ -120,6 +124,7 @@ public final class ListenerSupport<T> implements AutoCloseable {
      * @see #getFireable()
      */
     public List<T> getListeners() {
+        checkState();
         return Lists.reverse(listeners);
     }
 
@@ -127,6 +132,7 @@ public final class ListenerSupport<T> implements AutoCloseable {
      * @return класс слушателей, который поддерживает данный {@link ListenerSupport}
      */
     public Class<T> getListenerClass() {
+        checkState();
         return clazz;
     }
 
@@ -145,5 +151,9 @@ public final class ListenerSupport<T> implements AutoCloseable {
                  .append("listeners: ").append(listeners)
                  .append(']')
                  .toString();
+    }
+
+    private void checkState() throws IllegalStateException {
+        Preconditions.checkState(!closed.get(), "ListenerSupport is closed");
     }
 }
