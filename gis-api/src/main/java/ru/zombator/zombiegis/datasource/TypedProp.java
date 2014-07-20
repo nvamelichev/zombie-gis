@@ -116,10 +116,7 @@ public final class TypedProp<T extends Serializable> implements Serializable, Co
     private TypedProp(Prop prop, Class<T> clazz) {
         if (prop.isEnum()) {
             Preconditions.checkArgument(prop.getEnumType().equals(clazz),
-                    "property eLong class must match clazz");
-        } else {
-            Preconditions.checkArgument(prop.getPrimitive().getType().equals(clazz),
-                    "property primitive class must match clazz");
+                    "property enum class must match clazz");
         }
 
         this.prop = prop;
