@@ -168,6 +168,13 @@ public final class TypedProp<T extends Serializable> implements Serializable, Co
     }
 
     /**
+     * @return <code>true</code>, если значение данного свойства - элемент перечисления; иначе <code>false</code>
+     */
+    public boolean isEnum() {
+        return prop.isEnum();
+    }
+
+    /**
      * @return все поддерживаемые клиентом свойства
      */
     public static TypedProp<?>[] values() {
