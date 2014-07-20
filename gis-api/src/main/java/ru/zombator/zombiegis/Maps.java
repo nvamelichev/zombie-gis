@@ -22,6 +22,8 @@ public interface Maps {
      * Возвращает список карт.
      *
      * @return соответствие "идентификатор карты"-"карта"
+     *
+     * @throws GISException не удалось получить список карт
      */
     Map<Long, MapMeta> getList() throws GISException;
 
@@ -32,9 +34,10 @@ public interface Maps {
      *
      * @return карта
      *
-     * @throws IllegalArgumentException карты с таким идентификатором не существует
+     * @throws NoSuchMapException карты с таким идентификатором не существует
+     * @throws GISException ошибка при получении карты
      *
      * @see ObjMap#open()
      */
-    ObjMap newMap(long mapId);
+    ObjMap newMap(long mapId) throws NoSuchMapException, GISException;
 }
