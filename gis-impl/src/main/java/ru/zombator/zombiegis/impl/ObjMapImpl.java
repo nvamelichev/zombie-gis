@@ -1,18 +1,20 @@
 package ru.zombator.zombiegis.impl;
 
-import com.google.common.base.Preconditions;
-import com.google.common.base.Predicate;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableSet;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import org.openide.util.Lookup;
+
+import com.google.common.base.Preconditions;
+import com.google.common.base.Predicate;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableSet;
+
 import ru.zombator.util.ListenerSupport;
 import ru.zombator.zombiegis.GISException;
 import ru.zombator.zombiegis.datasource.ObjFactory;
@@ -187,7 +189,7 @@ public final class ObjMapImpl implements ObjMap {
         @Override
         public void onCreate(ObjDTO[] created) {
             objListeners.getFireable().objsAdded(toDomain(created));
-        }
+            }
 
         @Override
         public void onModify(ObjDTO[] modified) {
@@ -205,7 +207,7 @@ public final class ObjMapImpl implements ObjMap {
             Collection<Obj<?, ?>> objs = OBJ_FACTORY.toDomain(Arrays.asList(dtos));
             for (Obj<?, ?> obj: objs) {
                 objects.put(obj.getId(), obj);
-            }
+        }
 
             return objs;
         }
