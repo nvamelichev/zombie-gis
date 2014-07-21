@@ -4,10 +4,8 @@ import java.awt.Font;
 import java.awt.Paint;
 import java.util.Collection;
 import java.util.EnumSet;
-import java.util.Objects;
 import java.util.Set;
 
-import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableSet;
 
 import ru.zombator.zombiegis.model.obj.def.BasicViewModel;
@@ -17,7 +15,7 @@ import ru.zombator.zombiegis.properties.TextStyle;
 /**
  * Модель отображения подписи.
  *
- * @author anv
+ * @author nvamelichev
  */
 public final class LabelView extends BasicViewModel {
     private final String text;
@@ -99,19 +97,28 @@ public final class LabelView extends BasicViewModel {
         private TextAlign alignment;
 
         public Builder text(String text) {
-            this.text = Objects.requireNonNull(text, "text");
+            if (text == null) {
+                return this;
+            }
+
+            this.text = text;
             return this;
         }
 
         public Builder font(String fontName) {
-            Preconditions.checkArgument(fontName != null && !fontName.trim().isEmpty(),
-                    "font name must not be null or empty");
+            if (fontName == null || fontName.trim().isEmpty()) {
+                return this;
+            }
+
             this.fontName = fontName;
             return this;
         }
 
         public Builder size(int fontSize) {
-            Preconditions.checkArgument(fontSize > 0, "font size must be strictly positive");
+            if (fontSize <= 0) {
+                return this;
+            }
+
             this.fontSize = fontSize;
             return this;
         }
@@ -155,7 +162,11 @@ public final class LabelView extends BasicViewModel {
         }
 
         public Builder align(TextAlign alignment) {
-            this.alignment = Objects.requireNonNull(alignment, "alignment");
+            if (alignment == null) {
+                return this;
+            }
+
+            this.alignment = alignment;
             return this;
         }
 

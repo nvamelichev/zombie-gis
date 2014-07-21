@@ -7,7 +7,7 @@ import ru.zombator.zombiegis.model.obj.def.BasicViewModel;
 /**
  * Модель отображения полигона.
  *
- * @author anv
+ * @author nvamelichev
  */
 public final class PolyView extends BasicViewModel {
     private final boolean closed;
@@ -48,7 +48,11 @@ public final class PolyView extends BasicViewModel {
             return closed(false);
         }
 
-        public Builder closed(boolean closed) {
+        public Builder closed(Boolean closed) {
+            if (closed == null) {
+                return this;
+            }
+
             this.closed = closed;
             return this;
         }

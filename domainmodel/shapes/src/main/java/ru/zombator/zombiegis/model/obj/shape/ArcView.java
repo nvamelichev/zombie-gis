@@ -9,7 +9,7 @@ import ru.zombator.zombiegis.model.obj.def.BasicViewModel;
 /**
  * Представление эллипса.
  *
- * @author anv
+ * @author nvamelichev
  */
 public final class ArcView extends BasicViewModel {
     private final double start;
@@ -86,28 +86,44 @@ public final class ArcView extends BasicViewModel {
         private double rX = DEFAULT_RADIUS;
         private double rY = DEFAULT_RADIUS;
 
-        public Builder startAt(double start) {
+        public Builder startAt(Double start) {
+            if (start == null) {
+                return this;
+            }
+
             Preconditions.checkArgument(start >= START_MIN_VALUE && start <= START_MAX_VALUE,
                     "start angle must lie between %s and %s", START_MIN_VALUE, START_MAX_VALUE);
             this.start = start;
             return this;
         }
 
-        public Builder extent(double extent) {
+        public Builder extent(Double extent) {
+            if (extent == null) {
+                return this;
+            }
+
             Preconditions.checkArgument(extent >= EXTENT_MIN_VALUE && extent <= EXTENT_MAX_VALUE,
                     "extent must lie between %s and %s", EXTENT_MIN_VALUE, EXTENT_MAX_VALUE);
             this.extent = extent;
             return this;
         }
 
-        public Builder xRadius(double rX) {
+        public Builder xRadius(Double rX) {
+            if (rX == null) {
+                return this;
+            }
+
             Preconditions.checkArgument(rX > 0 && rX < Double.POSITIVE_INFINITY,
                     "X radius must be a strictly positive finite number");
             this.rX = rX;
             return this;
         }
 
-        public Builder yRadius(double rY) {
+        public Builder yRadius(Double rY) {
+            if (rY == null) {
+                return this;
+            }
+
             Preconditions.checkArgument(rY > 0 && rY < Double.POSITIVE_INFINITY,
                     "Y radius must be a strictly positive finite number");
             this.rY = rY;

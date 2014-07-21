@@ -60,7 +60,11 @@ public class BasicViewModel implements ViewModel {
             return showName(false);
         }
 
-        public Builder showName(boolean showName) {
+        public Builder showName(Boolean showName) {
+            if (showName == null) {
+                return this;
+            }
+
             this.showName = showName;
             return this;
         }

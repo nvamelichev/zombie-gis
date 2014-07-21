@@ -53,7 +53,11 @@ public class BasicMobDataModel extends BasicDataModel implements MobDataModel {
         protected Builder() {
         }
 
-        public Builder onCourse(double course) {
+        public Builder onCourse(Double course) {
+            if (course == null) {
+                return this;
+            }
+
             Preconditions.checkArgument(course >= MIN_COURSE && course <= MAX_COURSE,
                     "course must lie between %s and %s degrees", MIN_COURSE, MAX_COURSE);
             this.course = course;
@@ -61,7 +65,11 @@ public class BasicMobDataModel extends BasicDataModel implements MobDataModel {
             return this;
         }
 
-        public Builder movingAt(double speed) {
+        public Builder movingAt(Double speed) {
+            if (speed == null) {
+                return this;
+            }
+
             Preconditions.checkArgument(speed >= 0 && speed < Double.POSITIVE_INFINITY,
                     "speed must be non-negative and not infinite");
             this.speed = speed;

@@ -57,6 +57,10 @@ public class BasicDataModel implements DataModel {
         }
 
         public Builder named(String name) {
+            if (name == null) {
+                return this;
+            }
+
             this.name = name;
             return this;
         }
@@ -74,7 +78,11 @@ public class BasicDataModel implements DataModel {
             return visible(false);
         }
 
-        public Builder visible(boolean visible) {
+        public Builder visible(Boolean visible) {
+            if (visible == null) {
+                return this;
+            }
+
             this.visible = visible;
             return this;
         }
