@@ -12,6 +12,7 @@ import org.openide.util.Lookup;
 
 import com.google.common.base.Preconditions;
 import com.google.common.base.Predicate;
+import com.google.common.collect.Collections2;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 
@@ -71,6 +72,11 @@ public final class ObjMapImpl implements ObjMap {
     }
 
     @Override
+    public String getName() {
+        return getMeta().getName();
+    }
+
+    @Override
     public MapMeta getMeta() {
         return meta;
     }
@@ -83,7 +89,7 @@ public final class ObjMapImpl implements ObjMap {
     @Override
     public ImmutableSet<Obj<?, ?>> objs(Predicate<Obj<?, ?>> pred) {
         Preconditions.checkState(open.get(), "cannot get map objects when map is not opened");
-        return ImmutableSet.copyOf(objects.values());
+        return ImmutableSet.copyOf(Collections2.filter(objects.values(), pred));
     }
 
     @Override
