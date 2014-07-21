@@ -42,10 +42,24 @@
             <artifactId>org-netbeans-modules-settings</artifactId>
             <version>${netbeans.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-dialogs</artifactId>
+            <version>${netbeans.version}</version>
+        </dependency>
 
         <dependency>
-            <groupId>ru.zombator.libs</groupId>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ru.zombator.lib</groupId>
             <artifactId>openmap-wrapper</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ru.zombator.lib</groupId>
+            <artifactId>swingx-wrapper</artifactId>
             <version>${project.version}</version>
         </dependency>
 
