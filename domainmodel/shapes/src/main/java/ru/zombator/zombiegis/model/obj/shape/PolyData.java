@@ -2,6 +2,8 @@ package ru.zombator.zombiegis.model.obj.shape;
 
 import java.util.List;
 
+import java.util.ArrayList;
+
 import com.google.common.collect.ImmutableList;
 
 import ru.zombator.zombiegis.geo.Pos;
@@ -26,5 +28,48 @@ public final class PolyData extends BasicDataModel {
      */
     public List<Pos> getPoints() {
         return points;
+    }
+
+    /**
+     * Возвращает построитель информационной модели объекта.
+     *
+     * @return построитель
+     */
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    /**
+     * Построитель информационной модели.
+     */
+    public static class Builder extends BasicDataModel.Builder {
+        private final List<Pos> points = new ArrayList<>();
+
+        protected Builder() {
+        }
+
+        @Override
+        public Builder at(Pos pos) {
+            throw new UnsupportedOperationException("polygon cannot be defined by its center; call points(List<Pos>)");
+        }
+
+        public Builder points(List<Pos> points) {
+            points.clear();
+            points.addAll(points);
+            return this;
+        }
+
+        /**
+         * @return информационная модель
+         */
+        @Override
+        public PolyData build() {
+            return new PolyData(getName(), isVisible(), points);
+        }
+
+        // Для наследников, которые хотят воспользоваться значениями:
+        protected final List<Pos> getPoints() {
+            return ImmutableList.copyOf(points);
+        }
     }
 }
