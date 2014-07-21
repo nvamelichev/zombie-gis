@@ -66,7 +66,11 @@ public class BasicDataModel implements DataModel {
         }
 
         public Builder at(Pos pos) {
-            this.pos = Objects.requireNonNull(pos, "pos");
+            if (pos == null) {
+                return this;
+            }
+            
+            this.pos = pos;
             return this;
         }
 
