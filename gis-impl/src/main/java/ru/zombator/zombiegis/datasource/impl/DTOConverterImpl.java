@@ -55,14 +55,12 @@ public final class DTOConverterImpl implements DTOConverter {
     private static final class DefObjData implements ObjData {
         private final long id;
         private final long timestamp;
-        private final Operation operation;
         private final PropValues props;
 
         public DefObjData(ObjDTO odto) {
             this.id = odto.id;
             this.timestamp = odto.timestamp;
             this.props = new DefProps(odto.values);
-            this.operation = odto.operation;
         }
 
         @Override
@@ -73,11 +71,6 @@ public final class DTOConverterImpl implements DTOConverter {
         @Override
         public long getTimestamp() {
             return timestamp;
-        }
-
-        @Override
-        public Operation getOperation() {
-            return operation;
         }
 
         @Override

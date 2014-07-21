@@ -1,7 +1,5 @@
 package ru.zombator.zombiegis.datasource;
 
-import ru.zombator.zombiegis.transfers.ObjDTO.Operation;
-
 /**
  * Данные объекта карты.
  *
@@ -22,9 +20,4 @@ public interface ObjData {
      * @return значения свойств объекта
      */
     PropValues getProps();
-
-    /**
-     * @return операция, производимая над объектом
-     */
-    Operation getOperation();
 }
