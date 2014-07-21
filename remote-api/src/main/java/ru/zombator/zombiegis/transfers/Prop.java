@@ -23,6 +23,10 @@ public enum Prop {
      * Тип объекта.
      */
     TYPE(Primitive.STR, Type.class),
+    /**
+     * Отображается ли объект.
+     */
+    VISIBLE(Primitive.BOOL),
 
     /**
      * Географическое положение объекта.

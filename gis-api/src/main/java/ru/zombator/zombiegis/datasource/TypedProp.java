@@ -36,6 +36,10 @@ public final class TypedProp<T extends Serializable> implements Serializable, Co
      * Тип объекта.
      */
     public static final TypedProp<Type> TYPE = new TypedProp<>(Prop.TYPE, Type.class);
+    /**
+     * Отображать ли объект.
+     */
+    public static final TypedProp<Boolean> VISIBLE = new TypedProp<>(Prop.VISIBLE, Boolean.class);
 
     /**
      * Географическое положение объекта.
