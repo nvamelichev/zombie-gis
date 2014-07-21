@@ -34,7 +34,7 @@ public final class ObjDTO implements Serializable {
          */
         CREATE,
         /**
-         * Объект был изменен. В массиве <code>values</code> переданы все добавленные и измененные значения свойств объекта.
+         * Объект был изменен. В массиве <code>values</code> переданы значения всех свойств объекта.
          */
         UPDATE,
         /**
