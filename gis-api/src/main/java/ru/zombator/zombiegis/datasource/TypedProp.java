@@ -9,6 +9,7 @@ import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 import com.google.common.base.Preconditions;
+import java.awt.Color;
 
 import ru.zombator.zombiegis.geo.Pos;
 import ru.zombator.zombiegis.properties.TextAlign;
@@ -62,11 +63,11 @@ public final class TypedProp<T extends Serializable> implements Serializable, Co
     /**
      * Основной цвет (цвет текста или цвет линий).
      */
-    public static final TypedProp<Long> FOREGROUND = new TypedProp<>(Prop.FOREGROUND, Long.class);
+    public static final TypedProp<Color> FOREGROUND = new TypedProp<>(Prop.FOREGROUND, Color.class);
     /**
      * Цвет фона.
      */
-    public static final TypedProp<Long> BACKGROUND = new TypedProp<>(Prop.BACKGROUND, Long.class);
+    public static final TypedProp<Color> BACKGROUND = new TypedProp<>(Prop.BACKGROUND, Color.class);
 
     // Специфические свойства:
     /**
