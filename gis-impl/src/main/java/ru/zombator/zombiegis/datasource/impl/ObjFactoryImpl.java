@@ -38,16 +38,16 @@ public final class ObjFactoryImpl implements ObjFactory {
             Type type = data.getProps().get(TYPE);
             if (type == null) {
                 LOG.log(Level.WARNING,
-                        "received ObjData (id: {0}, timestamp: {1}, operation: {2}) without value for Prop.TYPE; ignoring",
-                        new Object[]{data.getId(), data.getTimestamp(), data.getOperation()});
+                        "received ObjData (id: {0}, timestamp: {1}) without value for Prop.TYPE; ignoring",
+                        new Object[]{data.getId(), data.getTimestamp()});
                 continue;
             }
 
             ObjCreator creator = getCreator(data, type);
             if (creator == null) {
                 LOG.log(Level.WARNING,
-                        "could not find creator for ObjData (id: {0}, type: {1}, timestamp: {2}, operation: {3}; ignoring",
-                        new Object[]{data.getId(), type, data.getTimestamp(), data.getOperation()});
+                        "could not find creator for ObjData (id: {0}, type: {1}, timestamp: {2}; ignoring",
+                        new Object[]{data.getId(), type, data.getTimestamp()});
                 continue;
             }
 
