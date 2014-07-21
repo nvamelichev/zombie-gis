@@ -27,6 +27,10 @@ public enum Prop {
      * Отображается ли объект.
      */
     VISIBLE(Primitive.BOOL),
+    /**
+     * Отображается ли имя объекта.
+     */
+    SHOW_NAME(Primitive.BOOL),
 
     /**
      * Географическое положение объекта.
