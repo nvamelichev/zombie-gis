@@ -48,6 +48,10 @@ public abstract class BasicObjCreator implements ObjCreator {
 
     @Override
     public boolean canConvert(ObjData data) {
+        if (!data.getProps().hasValue(TypedProp.NAME)) {
+            return false;
+        }
+
         Type type = data.getProps().get(TypedProp.TYPE);
         if (type == null) {
             return false;
