@@ -142,6 +142,7 @@
         <!-- NetBeans Library Wrappers -->
         <module>jcip-annotations-wrapper</module>
         <module>openmap-wrapper</module>
+        <module>swingx-wrapper</module>
 
         <!-- NetBeans App -->
         <module>branding</module>
