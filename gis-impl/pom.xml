@@ -44,6 +44,12 @@
             <artifactId>zombiegis-remote-api</artifactId>
             <version>${project.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>ru.zombator</groupId>
+            <artifactId>zombiegis-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
