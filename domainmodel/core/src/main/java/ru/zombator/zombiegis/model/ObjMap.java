@@ -41,6 +41,14 @@ public interface ObjMap extends AutoCloseable {
     long getId();
 
     /**
+     * Возвращает название карты. Вызов аналогичен вызову
+     * <code>{@link #getMeta() getMeta()}.{@link MapMeta#getName() getName()}</code>.
+     *
+     * @return название карты
+     */
+    String getName();
+
+    /**
      * Возвращает метаданные карты.
      *
      * @return метаданные карты
