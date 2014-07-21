@@ -21,8 +21,8 @@ import ru.zombator.zombiegis.properties.Type;
  * <pre>
  * Lookups.forPath(ObjCreator.PATH + "/" + type).lookupAll(ObjCreator.class),
  * </pre>
- * где <code>type</code> - {@link Type#name() название} {@link Type типа объектов}.
  * </blockquote>
+ * где <code>type</code> - {@link Type#name() название} {@link Type типа объектов}.
  *
  * @author nvamelichev
  */
