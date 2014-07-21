@@ -147,5 +147,6 @@
         <!-- NetBeans App -->
         <module>branding</module>
         <module>application</module>
+        <module>remote-impl</module>
     </modules>
 </project>

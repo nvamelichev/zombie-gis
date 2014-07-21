@@ -24,3 +24,4 @@ hs_err_pid*
 /openmap-wrapper/target/
 /gis-ui/target/
 /swingx-wrapper/target/
+/remote-impl/target/

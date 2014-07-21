@@ -39,7 +39,12 @@
             <version>${project.version}</version>
         </dependency>
 
-        <!-- TODO: Remote API Impl: -->
+        <!-- Remote API Impl: -->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>zombiegis-remote-impl</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 
         <!-- GIS UI -->
         <dependency>
@@ -47,6 +52,20 @@
             <artifactId>zombiegis-ui</artifactId>
             <version>${project.version}</version>
         </dependency>
+
+        <!-- Domain Model -->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>zombiegis-domainmodel-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>zombiegis-domainmodel-shapes</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- TODO: Object Renderers -->
     </dependencies>
 
     <build>
