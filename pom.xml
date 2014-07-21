@@ -134,7 +134,7 @@
         <module>gis-impl</module>
 
         <!-- UI -->
-        <module>ui</module>
+        <module>gis-ui</module>
 
         <!-- Utilities -->
         <module>common</module>
