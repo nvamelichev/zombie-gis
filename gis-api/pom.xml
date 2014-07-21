@@ -66,6 +66,8 @@
                         <publicPackage>ru.zombator.zombiegis.datasource.def</publicPackage>
                         <publicPackage>ru.zombator.zombiegis.datasource.spi</publicPackage>
                         <publicPackage>ru.zombator.zombiegis.datasource.spi.def</publicPackage>
+                        <publicPackage>ru.zombator.zombiegis.obj.renderer</publicPackage>
+                        <publicPackage>ru.zombator.zombiegis.obj.renderer.def</publicPackage>
                     </publicPackages>
                 </configuration>
             </plugin>
