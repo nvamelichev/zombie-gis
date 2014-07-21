@@ -130,15 +130,21 @@
         <module>gis-api</module>
         <module>gis-api-annotations</module>
 
+        <!-- API Implementation -->
+        <module>gis-impl</module>
+
+        <!-- UI -->
+        <module>ui</module>
+
         <!-- Utilities -->
         <module>common</module>
 
         <!-- NetBeans Library Wrappers -->
         <module>jcip-annotations-wrapper</module>
+        <module>openmap-wrapper</module>
 
         <!-- NetBeans App -->
         <module>branding</module>
         <module>application</module>
-        <module>gis-impl</module>
     </modules>
 </project>

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>com.bbn</groupId>
+        <artifactId>openmap-maven</artifactId>
+        <version>5.0.3</version>
+    </parent>
+    
+    <groupId>com.bbn</groupId>
+    <artifactId>openmap</artifactId>
+    <name>openmap</name>
+    
+    <dependencies>
+        <dependency>
+            <groupId>com.sun.media</groupId>
+            <artifactId>jai-codec</artifactId>
+            <version>1.1.3</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>com.bbn</groupId>
+            <artifactId>ext</artifactId>
+            <version>${project.version}</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <sourceDirectory>${ant.src.directory}</sourceDirectory>
+        <resources>
+            <resource>
+                <directory>${ant.src.directory}</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>   
+                    <exclude>**/build.xml</exclude>         
+                </excludes>
+            </resource>
+        </resources>
+        
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <artifactId>maven-javadoc-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+    
+    <properties>
+        <ant.src.directory>../external-git/openmap/src/openmap</ant.src.directory>
+    </properties>
+</project>

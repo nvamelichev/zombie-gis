@@ -24,3 +24,6 @@ hs_err_pid*
 /gis-api-annotations/target/
 /impl/target/
 /gis-impl/target/
+/openmap/target/
+/openmap-wrapper/target/
+/ui/target/
