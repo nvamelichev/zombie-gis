@@ -48,7 +48,13 @@ public final class PolyData extends BasicDataModel {
         protected Builder() {
         }
 
+        /**
+         * @throws UnsupportedOperationException операция не поддерживается
+         *
+         * @deprecated Задание центра полигона не поддерживается, используйте {@link #points(List) points(List&lt;Pos>)}.
+         */
         @Override
+        @Deprecated
         public Builder at(Pos pos) {
             throw new UnsupportedOperationException("polygon cannot be defined by its center; call points(List<Pos>)");
         }

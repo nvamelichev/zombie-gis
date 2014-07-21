@@ -114,12 +114,12 @@ public final class LabelView extends BasicViewModel {
             return this;
         }
 
-        public Builder size(int fontSize) {
-            if (fontSize <= 0) {
+        public Builder size(Number fontSize) {
+            if (fontSize == null || fontSize.intValue() <= 0) {
                 return this;
             }
 
-            this.fontSize = fontSize;
+            this.fontSize = fontSize.intValue();
             return this;
         }
 

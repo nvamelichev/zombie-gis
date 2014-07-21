@@ -3,6 +3,7 @@ package ru.zombator.zombiegis.datasource.spi.def;
 import org.netbeans.api.annotations.common.NonNull;
 
 import ru.zombator.zombiegis.datasource.ObjData;
+import ru.zombator.zombiegis.datasource.PropValues;
 import ru.zombator.zombiegis.datasource.TypedProp;
 import ru.zombator.zombiegis.datasource.def.DefObj;
 import ru.zombator.zombiegis.datasource.spi.ObjCreator;
@@ -24,33 +25,29 @@ import ru.zombator.zombiegis.model.obj.ViewModel;
 public abstract class BasicObjCreator implements ObjCreator {
     @Override
     public boolean canConvert(ObjData data) {
-        if (!data.getProps().hasValue(TypedProp.NAME)) {
-            return false;
-        }
-
-        return true;
+        return data.getProps().hasValue(TypedProp.NAME);
     }
 
     @Override
     public final Obj<?, ?> toDomain(ObjData data) {
-        return new DefObj<>(data, createDataModel(data), createViewModel(data));
+        return new DefObj<>(data, createDataModel(data.getProps()), createViewModel(data.getProps()));
     }
 
     /**
      * Создает информационную модель объекта.
      *
-     * @param data данные объекта
+     * @param props значения свойств объекта
      *
      * @return информационная модель
      */
-    protected abstract @NonNull DataModel createDataModel(@NonNull ObjData data);
+    protected abstract @NonNull DataModel createDataModel(@NonNull PropValues props);
 
     /**
      * Создает модель отображения объекта.
      *
-     * @param data данные объекта
+     * @param props значения свойств объекта
      *
      * @return модель отображения
      */
-    protected abstract @NonNull ViewModel createViewModel(@NonNull ObjData data);
+    protected abstract @NonNull ViewModel createViewModel(@NonNull PropValues props);
 }
