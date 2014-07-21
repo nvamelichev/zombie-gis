@@ -33,7 +33,7 @@
         </dependency>
         <dependency>
             <groupId>ru.zombator</groupId>
-            <artifactId>zombiegis-remote-api</artifactId>
+            <artifactId>zombiegis-api</artifactId>
             <version>${project.version}</version>
         </dependency>
 

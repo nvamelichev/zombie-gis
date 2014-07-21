@@ -50,7 +50,6 @@
                 <artifactId>nbm-maven-plugin</artifactId>
                 <configuration>
                     <publicPackages>
-                        <publicPackage>ru.zombator.zombiegis.properties</publicPackage>
                         <publicPackage>ru.zombator.zombiegis.transfers</publicPackage>
                         <publicPackage>ru.zombator.zombiegis.interfaces</publicPackage>
                     </publicPackages>

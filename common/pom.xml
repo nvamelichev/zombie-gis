@@ -45,6 +45,8 @@
                 <configuration>
                     <publicPackages>
                         <publicPackage>ru.zombator.util</publicPackage>
+
+                        <publicPackage>ru.zombator.zombiegis.properties</publicPackage>
                         <publicPackage>ru.zombator.zombiegis.geo</publicPackage>
                     </publicPackages>
                 </configuration>
