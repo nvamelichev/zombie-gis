@@ -14,16 +14,12 @@ hs_err_pid*
 /remote-api/target/
 /branding/target/
 /application/target/
-/model/target/
 /jcip-annotations-wrapper/target/
 /guava-testlib-wrapper/target/
 /domainmodel/core/target/
 /domainmodel/shapes/target/
 /gis-api/target/
-/annotations/target/
 /gis-api-annotations/target/
-/impl/target/
 /gis-impl/target/
-/openmap/target/
 /openmap-wrapper/target/
-/ui/target/
+/gis-ui/target/
